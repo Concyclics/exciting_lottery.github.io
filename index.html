@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>exciting lottery(www.github.com/Concyclics)</title>
+    </head>
+    
+    <script>
+        var total=60;
+        var begin=1;
+        
+        function init() 
+        {
+            document.getElementById("inputN").value=total;
+            document.getElementById("inputBG").value=begin;
+        }
+        
+        
+        function sleep (time) 
+        {
+            return new Promise((resolve) => setTimeout(resolve, time));
+        }
+        
+        
+        function lucky_student()
+        {
+            document.getElementById("target").style.color="#fffc40";
+            var lucky_number=(Math.floor((Math.random()*19260817))%total+Number(begin));
+            document.getElementById("target").innerHTML=lucky_number;
+        }
+        
+        
+        
+        function get_total()
+        {
+            total=document.getElementById("inputN").value;
+            begin=document.getElementById("inputBG").value;
+        }
+        
+    </script>
+    
+        <body style="background-color: #010c1e;" onload="init()">
+            
+            
+            
+            <h1 style="text-align:center;"><font color="#fffc40">exciting lottery</font></h1>
+            
+            
+            
+            <h2 style="text-align:center;">
+                    <a href="http://www.github.com/Concyclics" title="visit my GitHub.">
+                        <font style="font-size: 16px;">by Concyclics</font>
+                    </a>
+            </h2>
+            
+            
+            
+            <h3 style="text-align:center;"><font color="#faba61">↓ today's lucky number ↓</font></h3>
+            
+            
+        <center>
+            
+            <button  onclick="lucky_student()">
+                <font style="text-aligin:center;line-height:40px;font-size:80px;" color="#001e38"; id="target">
+                    click
+                </font>
+            </button>
+            
+            <form>
+                <p></p>
+                <font color="#faba61">begin:</font>
+                <input type="text" id="inputBG" value="1" size="5">
+                
+                <font color="#faba61">headcount:</font>
+                <input type="text" id="inputN" value="60" size="5">
+                <input type="button" value="enter" onclick="get_total()">
+            </form>
+            
+        </center>
+    </body>
+    
+
+    
+    <style>
+        button
+        {
+            width: 300px;
+            height: 300px;
+            background-color: #c6cdd7;
+            border-radius:900px;
+        }
+    </style>
+</html>
+
+        
